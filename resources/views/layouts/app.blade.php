@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,28 +29,28 @@
         }
 
         main {
-            flex: 1; /* area konten utama fleksibel */
+            flex: 1; 
         }
 
         footer {
-            margin-top: auto; /* selalu nempel di bawah */
+            margin-top: auto; 
         }
     </style>
 </head>
 <body>
 
-    {{-- Navbar (tidak tampil di halaman login) --}}
+    {{--Navbar (tidak tampil di halaman login) --}}
     @if (!Request::is('/') && !Request::routeIs('login'))
-        <x-navbar :username="$username ?? null" />
+        @include('components.navbar', ['username' => session('username')])
     @endif
 
-    {{-- Konten utama --}}
+    {{--konten utama --}}
     <main class="container mt-4">
         @yield('content')
     </main>
 
-    {{-- Footer --}}
-    <x-footer />
+    {{--Footer --}}
+    @include('components.footer')
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
