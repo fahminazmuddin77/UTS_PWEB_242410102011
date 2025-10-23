@@ -3,7 +3,7 @@
 @section('content')
 <div class="container py-5">
 
-  {{-- 🌅 Hero Section --}}
+  {{-- Hero Section --}}
   <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
     @if($username)
       <h2 class="fw-bold text-gradient mb-2">Selamat Datang, {{ ucfirst($username) }}</h2>
@@ -21,7 +21,7 @@
     @endif
   </div>
 
-  {{-- 🏷️ Promo Card --}}
+  {{-- Promo Card --}}
   <div class="card shadow-lg border-0 mb-5 promo-card" data-aos="zoom-in" data-aos-duration="900">
     <div class="card-body text-center p-5 bg-light rounded position-relative overflow-hidden">
       <div class="promo-overlay"></div>
@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  {{-- 🍛 Menu Favorit --}}
+  {{-- Menu Favorit --}}
   <h4 class="text-center mb-4 fw-bold text-gradient" data-aos="fade-up">🍴 Menu Favorit Pelanggan</h4>
 
   <div class="row justify-content-center">
@@ -71,7 +71,7 @@
   </div>
 </div>
 
-{{-- ✨ AOS Animation Library --}}
+{{-- AOS Animation Library --}}
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -81,7 +81,7 @@
   });
 </script>
 
-{{-- 🎨 Custom Style --}}
+{{--  Custom Style --}}
 <style>
   .text-gradient {
     background: linear-gradient(90deg, #8b4513, #d4a017);
